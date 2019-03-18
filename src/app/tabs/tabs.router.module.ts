@@ -16,6 +16,7 @@ const routes: Routes = [
           }
         ]
       },
+   
       {
         path: 'tab2',
         children: [
@@ -34,6 +35,25 @@ const routes: Routes = [
           }
         ]
       },
+      {
+        path: 'tab4',
+        children: [
+          {
+            path: '',
+            loadChildren: '../clients/clients.module#ClientsPageModule'
+          }
+        ]
+      },
+      {
+        path: 'tab5',
+        children: [
+          {
+            path: '',
+            loadChildren: '../aboutus/aboutus.module#AboutusPageModule'
+          }
+        ]
+      },
+      
       {
         path: '',
         redirectTo: '/tabs/tab1',
